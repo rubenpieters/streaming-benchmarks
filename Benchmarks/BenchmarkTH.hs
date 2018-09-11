@@ -25,6 +25,8 @@ createBgroup name fname =
                                   $(varE (mkName ("Conduit." ++ fname)))
             , benchIO "drinkery"  $(varE (mkName ("Drinkery.source")))
                                   $(varE (mkName ("Drinkery." ++ fname)))
+            , benchIO "Orthogonal-Pipes" $(varE (mkName ("OrthPipes.source")))
+                                  $(varE (mkName ("OrthPipes." ++ fname)))
             , benchPure "list"    $(varE (mkName ("List.source")))
                                   $(varE (mkName ("List." ++ fname)))
             , benchPure "pure-vector" $(varE (mkName ("VectorPure.source")))

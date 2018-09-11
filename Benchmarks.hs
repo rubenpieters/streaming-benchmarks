@@ -22,6 +22,7 @@ import qualified Benchmarks.Conduit as Conduit
 import qualified Benchmarks.Drinkery as Drinkery
 import qualified Benchmarks.List as List
 import qualified Benchmarks.VectorPure as VectorPure
+import qualified Benchmarks.OrthPipes as OrthPipes
 -- import qualified Benchmarks.LogicT as LogicT
 -- import qualified Benchmarks.ListT as ListT
 -- import qualified Benchmarks.ListTransformer as ListTransformer
@@ -41,7 +42,7 @@ main = do
       [ $(createBgroup "scan" "scan")
       , $(createBgroup "map" "map")
       , $(createBgroup "mapM" "mapM")
-      , $(createBgroup "concat" "concat")
+      --, $(createBgroup "concat" "concat")
       ]
     , bgroup "filtering"
       [ $(createBgroup "filter-even" "filterEven")
@@ -52,7 +53,7 @@ main = do
       , $(createBgroup "drop-all" "dropAll")
       , $(createBgroup "dropWhile-true" "dropWhileTrue")
       ]
-    , $(createBgroup "zip" "zip")
+{-    , $(createBgroup "zip" "zip")
     , bgroup "append"
       [ benchIO "streamly" Streamly.appendSource Streamly.toNull
       , benchIO "conduit" Conduit.appendSource Conduit.toNull
@@ -62,7 +63,7 @@ main = do
       , bench "vector" $ nfIO (return 1 :: IO Int)
 --    , benchIO "streaming" Streaming.appendSource Streaming.toNull
       , bench "streaming" $ nfIO (return 1 :: IO Int)
-      ]
+      ]-}
       {-
       -- Perform 100,000 mapM recursively over a stream of length 10
       -- implemented only for vector and streamly.

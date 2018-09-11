@@ -30,11 +30,11 @@ charts =
         , "zip"
         ]
       )
-    , -} ( "Append Operation"
+    ,  ( "Append Operation"
       , [ "append"
         ]
       )
-    , ( "Key Operations"
+    , -} ( "Key Operations"
       , [
           "elimination/drain"
         , "filtering/drop-all"
@@ -50,7 +50,7 @@ charts =
         , "filtering/filter-even"
         , "transformation/scan"
         , "transformation/mapM"
-        , "zip"
+        --, "zip"
         -- , "transformation/concat"
         ]
       )

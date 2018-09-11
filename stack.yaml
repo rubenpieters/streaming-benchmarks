@@ -1,6 +1,11 @@
 resolver: lts-12.0
 packages:
 - '.'
+- location:
+    git: https://github.com/rubenpieters/Orthogonal-Pipes.git
+    commit: ce01d21a1cac846506ba673fe55fc85528794161
+  extra-dep: true
+
 extra-deps:
   - streamly-0.4.1
 
